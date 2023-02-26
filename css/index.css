@@ -1,0 +1,111 @@
+#cau-1{
+    --dot-size:1.2rem;
+    --color-1:#11caf0;
+    --color-2:#cff4fc;
+}
+
+.cutom-tooltip{
+    --bs-tooltip-bg: var(--bs-primary);
+}
+#cau-1 .card-body{
+    position: relative;
+}
+#cau-1 .ten-tuyen{
+    display: inline-block;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    background-color: #fed100;
+    padding: 0 1em;
+    line-height: 2em;
+    height: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 1px 0 #0005;
+    transition: 0.5s;
+}
+#cau-1:hover .ten-tuyen{
+    padding: 0 3em;
+    box-shadow: 0 0 50px 0 #0005;
+    font-weight: bold;
+}
+#cau-1 .ds-ga{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+}
+#cau-1 .ga{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: var(--dot-size);
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+#cau-1 .ga label{
+    font-size: 0.8rem;
+    display:inline-block;
+    margin: -1rem 0 0;
+    padding: 0 0 0.25rem;
+    writing-mode: vertical-rl;
+    transform-origin: bottom right;
+    transform: rotate(45deg);
+}
+#cau-1 .ga span{
+    display: inline-block;
+    transform: rotate(180deg);
+}
+#cau-1 .ga [type="radio"]{
+    appearance: none;
+    width: 100%;
+    height: var(--dot-size);
+    position: relative;
+    pointer-events: none;
+}
+#cau-1 .ga [type="radio"]::after{
+    content: '';
+    pointer-events: auto;
+    display: block;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    background-color: #fff;
+    border: solid 3px #aaa;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    transition: 0.25s;
+}
+#cau-1 .ga [type="radio"]::before{
+    content: '';
+    display: block;
+    width: 100%;
+    border-top: solid 4px #999;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(0, -50%);
+}
+#cau-1 .ga:last-child [type="radio"]::before{
+    content: none;
+}
+#cau-1 .ga [type="radio"]:hover::after{
+    transform: translate(-50%) scale(1.3);
+    box-shadow: 0 0 5px 0 #000;
+    background-color: var(--color-2);
+    border-color: var(--color-1);
+}
+#cau-1 .ga [type="radio"]:checked::after{
+    background-color: var(--color-1);
+    border-color: var(--color-1);
+}
+#cau-1 .ga:has(~.ga [type="radio"]:checked) [type="radio"]::after{
+    background-color: var(--color-2);
+    border-color: var(--color-1);
+}
+#cau-1 .ga:has(~.ga [type="radio"]:checked) [type="radio"]::before{
+    border-color: var(--color-1);
+}
