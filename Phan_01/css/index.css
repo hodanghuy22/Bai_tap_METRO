@@ -1,10 +1,10 @@
 #cau-1{
-    --dot-size:1.2rem;
-    --color-1:#11caf0;
-    --color-2:#cff4fc;
+    --dot-size: 1.2rem;
+    --color-1: #11caf0;
+    --color-2: #cff4fc;
 }
 
-.cutom-tooltip{
+.custom-tooltip{
     --bs-tooltip-bg: var(--bs-primary);
 }
 #cau-1 .card-body{
@@ -13,12 +13,12 @@
 #cau-1 .ten-tuyen{
     display: inline-block;
     position: absolute;
-    top:0;
-    left:50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
     text-transform: uppercase;
     background-color: #fed100;
-    padding: 0 1em;
+    padding: 0 2em;
     line-height: 2em;
     height: 2em;
     border-radius: 1em;
@@ -39,13 +39,13 @@
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: var(--dot-size);
-    display:flex;
+    display: flex;
     flex-flow: column nowrap;
     align-items: center;
 }
 #cau-1 .ga label{
     font-size: 0.8rem;
-    display:inline-block;
+    display: inline-block;
     margin: -1rem 0 0;
     padding: 0 0 0.25rem;
     writing-mode: vertical-rl;
@@ -73,8 +73,8 @@
     border: solid 3px #aaa;
     border-radius: 50%;
     position: absolute;
-    top:0;
-    left:50%;
+    top: 0;
+    left: 50%;
     transform: translate(-50%);
     cursor: pointer;
     transition: 0.25s;
@@ -85,20 +85,20 @@
     width: 100%;
     border-top: solid 4px #999;
     position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(0, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(0,-50%);
 }
 #cau-1 .ga:last-child [type="radio"]::before{
     content: none;
 }
-#cau-1 .ga [type="radio"]:hover::after{
+#cau-1 .ga [type="radio"]:hover:after{
     transform: translate(-50%) scale(1.3);
     box-shadow: 0 0 5px 0 #000;
     background-color: var(--color-2);
     border-color: var(--color-1);
 }
-#cau-1 .ga [type="radio"]:checked::after{
+#cau-1 .ga [type="radio"]:checked:after{
     background-color: var(--color-1);
     border-color: var(--color-1);
 }
@@ -108,4 +108,22 @@
 }
 #cau-1 .ga:has(~.ga [type="radio"]:checked) [type="radio"]::before{
     border-color: var(--color-1);
+}
+header{
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    background-color: rgb(251, 161, 26);
+}
+footer{
+    background-color: rgb(251, 161, 26);
+}
+.logo_header img{
+    width: 100px;
+}
+.img_carou img{
+    height: 300px;
+}
+#btn_search{
+    margin: -50px;
 }
